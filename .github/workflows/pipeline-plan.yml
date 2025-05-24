@@ -20,7 +20,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4.2.1
         with:
           aws-region: "us-east-1"
-          role-to-assume: ${{ secrets.AWS_ROLE_DEPLOY }}
+          role-to-assume: "arn:aws:iam::381492081993:role/deploy-role" 
           role-duration-seconds: 900
 
       - name: setup terraform
